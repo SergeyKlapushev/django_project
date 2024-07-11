@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Заказы</title>
+</head>
+<body>
+    <h1>Заказы за последние {{ days }} дней</h1>
+    <ul>
+        {% for order, date in orders.items %}
+        <li>{{ order }} - {{ date|date:"Y-m-d" }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
