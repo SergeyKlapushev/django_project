@@ -9,6 +9,9 @@ class User(models.Model):
     password = models.CharField(max_length=100)
     age = models.IntegerField()
 
+    def __str__(self):
+        return f'Name: {self.name}, email: {self.email}, age:{self.age}'
+
 
 class Product(models.Model):
     name = models.CharField(max_length=100)
@@ -16,6 +19,7 @@ class Product(models.Model):
     price = models.DecimalField(max_digits=8, decimal_places=2)
     count = models.IntegerField()
     add_date = models.DateTimeField()
+    image = models.ImageField()
 
 
 class Order(models.Model):
