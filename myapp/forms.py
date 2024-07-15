@@ -25,6 +25,5 @@ class ManyFieldsFormWidget(forms.Form):
     message = forms.CharField(widget=forms.Textarea(attrs={'class': 'form-control'}))
 
 
-
 class ImageForm(forms.Form):
     image = forms.ImageField()
